@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ONG Esperança — Transformando Vidas</title>
+  <meta name="description" content="ONG Esperança — programas sociais, voluntariado, doações e transparência." />
+
+  <!-- Open Graph básico -->
+  <meta property="og:title" content="ONG Esperança" />
+  <meta property="og:description" content="Programas sociais, como ajudar, eventos e prestação de contas." />
+
+  <style>
+    /* --------------------------
+       Variáveis e reset
+       --------------------------*/
+    :root{
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --accent:#0066a2;
+      --accent-2:#00a38a;
+      --muted:#6b7280;
+      --maxw:1100px;
+      --radius:12px;
+      --shadow: 0 6px 18px rgba(12,20,30,0.08);
+      --gap:1.25rem;
+      --ff: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--ff);
+      background:linear-gradient(180deg,var(--bg),#ffffff);
+      color:#0b1320;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding-bottom:4rem;
+    }
+
+    a{color:var(--accent); text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+
+    .container{max-width:var(--maxw);margin:0 auto;padding:1.25rem}
+
+    /* --------------------------
+       Header / Nav
+       --------------------------*/
+    header{backdrop-filter:saturate(120%) blur(6px);position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.85);box-shadow:0 1px 0 rgba(15,23,42,0.03)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0}
+    .brand{display:flex;gap:0.75rem;align-items:center}
+    .brand .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .brand h1{font-size:1.05rem;margin:0}
+
+    nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0;align-items:center}
+    nav li{font-size:0.95rem}
+    .cta{background:var(--accent);color:white;padding:0.4rem 0.8rem;border-radius:10px;box-shadow:var(--shadow)}
+
+    /* mobile menu */
+    .menu-toggle{display:none}
+
+    /* --------------------------
+       Hero
+       --------------------------*/
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:2.25rem 0}
+    .hero-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem}
+    .hero h2{margin:0 0 .5rem;font-size:1.8rem}
+    .hero p{color:var(--muted);margin:0 0 1rem}
+    .stats{display:flex;gap:1rem;flex-wrap:wrap}
+    .stat{background:#f2f7fb;padding:.6rem .9rem;border-radius:10px;font-weight:600}
+
+    /* --------------------------
+       Sections
+       --------------------------*/
+    section{padding:2rem 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow)}
+    .programs .card h3{margin-top:0}
+
+    /* Events / list */
+    .events-list{display:grid;gap:.75rem}
+    .event{display:flex;gap:1rem;align-items:center;padding:.75rem;border-radius:10px;background:#fff}
+    .event .date{min-width:72px;text-align:center;padding:.5rem;border-radius:8px;background:#f3fbfa;color:var(--accent-2);font-weight:700}
+
+    /* Contact & forms */
+    form{display:grid;gap:.6rem}
+    input,textarea,select{padding:.6rem .75rem;border-radius:8px;border:1px solid #e6e9ef;font-size:0.95rem}
+    textarea{min-height:120px;resize:vertical}
+    .btn{display:inline-block;padding:.6rem .9rem;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:600}
+
+    /* Footer */
+    footer{padding:2rem 0;color:var(--muted);border-top:1px solid #eef3f7;margin-top:2rem}
+    .footer-grid{display:flex;gap:2rem;flex-wrap:wrap;align-items:flex-start}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:680px){
+      nav ul{display:none}
+      .menu-toggle{display:block}
+      .grid-3{grid-template-columns:1fr}
+      .brand h1{font-size:0.95rem}
+      .hero{padding:1rem 0}
+    }
+
+    /* Small helpers */
+    .muted{color:var(--muted)}
+    .center{display:flex;align-items:center;justify-content:center}
+
+  </style>
+</head>
+<body>
+
+  <header role="banner">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden>ES</div>
+        <div>
+          <h1>ONG Esperança da criança</h1>
+          <div class="muted" style="font-size:0.78rem">Comunidade • Educação • Saúde</div>
+        </div>
+      </div>
+<!--VINCULAR PAGINAS SECUNDARIAS-->
+      <nav role="navigation" aria-label="Navegação principal">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+        <ul id="main-nav">
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="programas.html">Programas</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="voluntarie.html">Voluntarie</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="index.htm">Home</a></li>
+          <li><a class="cta" href="#doar">Doar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-card">
+          <p class="muted">Nossa missão</p>
+          <h2>Transformando vidas através de ações locais e sustentáveis</h2>
+          <p class="muted">A ONG Esperança atua com educação, segurança alimentar e inclusão social. Trabalhamos com famílias, escolas e parceiros para criar oportunidades reais.</p>
+
+          <div style="display:flex;gap:0.6rem;margin-top:1rem">
+            <a class="btn" href="voluntarie.html">Quero ser voluntário</a>
+            <a class="btn" style="background:var(--accent-2)" href="doar.html">Doar agora</a>
+          </div>
+
+          <div style="margin-top:1rem" class="stats">
+            <div class="stat">informação</div>
+            <div class="stat">informação</div>
+            <div class="stat">informação</div>
+          </div>
+        </div>
+
+        <!-- area de destaque: imagem + newsletter -->
+        <aside>
+          <div class="card">
+            <img src="img/imagem de voluntario.jpg" alt="Voluntários ajudando a comunidade" />
+            <h3 style="margin:.75rem 0 0">Receba notícias</h3>
+            <p class="muted" style="margin:0 0 .5rem">Faça parte da nossa comunidade para acompanhar ações, eventos e prestação de contas.</p>
+            <form action="/subscribe" method="post" aria-label="Formulário de inscrição na newsletter">
+              <input type="email" name="email" placeholder="seu@exemplo.com" required />
+              <button class="btn" type="submit">Fazer parte</button>
+            </form>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SOBRE -->
+      <section id="sobre">
+        <div class="card">
+          <h2>Sobre a ONG Esperança</h2>
+          <p class="muted">Fundada em 2010, nossa ONG atua em projetos de educação complementar, reforço escolar e apoio psicossocial. Acreditamos que mudança vem com trabalho local e participação ativa da comunidade.</p>
+
+          <div style="margin-top:1rem" class="grid-3 programs">
+            <article class="card">
+              <h3>Educação</h3>
+              <p class="muted">Informação.</p>
+            </article>
+            <article class="card">
+              <h3>Segurança Alimentar</h3>
+              <p class="muted">informação.</p>
+            </article>
+            <article class="card">
+              <h3>Saúde</h3>
+              <p class="muted">informação.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRAMAS DETALHADOS -->
+      <section id="programas">
+        <h2>Programas</h2>
+        <div class="grid-3" style="margin-top:1rem">
+          <div class="card">
+            <h3> programa</h3> <!--ARRUMAR-->
+            <p class="muted"> informação</p>
+            <a href="contato.html">contactar</a>
+          </div>
+          <div class="card">
+            <h3> programa</h3> <!--ARRUMAR-->
+            <p class="muted">informação</p>
+            <a href="voluntarie.html">Participar</a>
+          </div>
+          <div class="card">
+            <h3> programa</h3> <!--ARRUMAR-->
+            <p class="muted"> informação</p>
+            <a href="eventos.html">Participar</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENTOS -->
+      <section id="eventos">
+        <h2>Eventos e Calendário</h2>
+        <div class="events-list" style="margin-top:1rem">
+          <div class="event">
+            <div class="date">10<br><span style="font-weight:400;font-size:0.75rem">Out</span></div>
+            <div>
+              <strong>evento 1</strong>
+              <div class="muted">Local: pindamanhangaba • 00:00 — 99:99</div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="date">25<br><span style="font-weight:400;font-size:0.75rem">Out</span></div>
+            <div>
+              <strong>evento 2</strong>
+              <div class="muted">Local: rua dos bobos • 00:00 — 99:99</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VOLUNTARIADO / DOAÇÕES -->
+      <section id="voluntarie">
+        <h2>Como Ajudar</h2>
+        <div class="grid-3" style="margin-top:1rem">
+          <div class="card">
+            <h3>Voluntário</h3>
+            <p class="muted">Preencha o formulário para participar como voluntário — receberemos sua inscrição e entraremos em contato.</p>
+            <a href="voluntarie.html">Quero me inscrever</a>
+          </div>
+          <div class="card">
+            <h3>Doações</h3>
+            <p class="muted">Doações financeiras e em material são bem-vindas. Usamos plataformas seguras para arrecadação e publicamos relatórios mensais.</p>
+            <p style="font-size:0.9rem"><strong>Conta para depósito (exemplo):</strong><br>Banco: 000 • Agência: 0000 • Conta: 000000-0 • CNPJ: 00.000.000/0000-00</p>
+            <a href="doar.html">Como doar</a>
+          </div>
+          <div class="card">
+            <h3>Parcerias</h3>
+            <p class="muted">Trabalhamos com empresas, prefeituras e escolas. Entre em contato para propostas de parceria.</p>
+            <a href="contato.html">Propor parceria</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRANSPARÊNCIA (link para relatórios) -->
+     <!-- <section id="transparencia">
+        <h2>Transparência</h2>
+        <div class="card" style="margin-top:1rem">
+          <p class="muted">Publicamos mensalmente extratos e relatórios de atividades. Faça o download dos últimos relatórios no centro de documentos da ONG.</p>
+          <ul class="muted">
+            <li><a href="#">Relatório Setembro 2025 (PDF)</a></li>
+            <li><a href="#">Prestação de contas 2024 (PDF)</a></li>
+          </ul>
+        </div>
+      </section>   -->
+
+      <!-- CONTATO -->
+      <section id="contato">
+        <h2>Fale Conosco</h2>
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:1rem;margin-top:1rem;align-items:start">
+          <div class="card">
+            <form action="/send-contact" method="post" aria-label="Formulário de contato">
+              <!-- OBS: substituir action por endpoint servidor ou serviço (ex: Formspree, Netlify Forms, Zapier) -->
+              <label for="name">Nome completo</label>
+              <input id="name" name="name" required />
+
+              <label for="email">E‑mail</label>
+              <input id="email" name="email" type="email" required />
+
+              <label for="subject">Assunto</label>
+              <input id="subject" name="subject" />
+
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" required></textarea>
+
+              <div style="display:flex;gap:.5rem;align-items:center;margin-top:.5rem">
+                <button class="btn" type="submit">Enviar</button>
+                <!--ADICIONAE O EMAIL DA INSTITUIÇÃO-->
+                <a href="#" class="muted">Ou envie um e‑mail</a>
+              </div>
+            </form>
+
+            <div style="margin-top:1rem;font-size:0.9rem" class="muted">
+              <strong>Endereço:</strong> Rua Exemplo, 123 • Bairro • Cidade / Estado<br>
+              <strong>Telefone:</strong> (00) 0000‑0000
+            </div>
+          </div>
+
+          <aside class="card">
+            <h3>Localização</h3>
+            <p class="muted">Nossa sede. Use o mapa para chegar.</p>
+            <!-- Aqui você pode integrar um iframe do Google Maps ou um link externo -->
+            <div style="height:180px;background:#eef6f9;border-radius:8px;display:flex;align-items:center;justify-content:center"> <a href="https://maps.app.goo.gl/h7FSfVvEcFYhffgB8" target="_blank" rel="noopener noreferrer">
+  <img src="img/localização da ong.jpg" alt="localização" />
+</a>
+ <div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- DOAR (secção com orientações) -->
+      <section id="doar">
+        <h2>Doações</h2>
+        <div class="card" style="margin-top:1rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <div style="flex:1;min-width:240px">
+            <h3>Doação única</h3>
+            <p class="muted">Contribua com qualquer valor. Recomendamos integrar um provedor de pagamento (Stripe, PagSeguro, Mercado Pago). Use o botão abaixo para redirecionar ao checkout.</p>
+            <a class="btn" href="doar.html" aria-label="Doar agora">Doar com cartão</a>
+          </div>
+
+          <div style="min-width:240px">
+            <h3>Doação recorrente</h3>
+            <p class="muted">Assine uma doação mensal para apoiar projetos de longo prazo. Informe-se sobre planos e benefícios.</p>
+            <!--ARRUMAR ISSO-->
+            <a class="btn" style="background:var(--accent-2)" href="#">Quero doar mensalmente</a>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div style="flex:1;min-width:200px">
+          <strong>ONG Esperança</strong>
+          <div class="muted" style="margin-top:.5rem">CNPJ: 00.000.000/0000-00 • Rua Exemplo, 123 • Cidade</div>
+        </div>
+        <div style="min-width:260px">
+          <nav aria-label="rodapé">
+            <a href="sobre.html">Sobre</a> • 
+            <a href="#">Transparência</a> • 
+            <a href="contato.html">Contato</a>
+          </nav>
+          <div style="margin-top:.75rem;font-size:0.85rem" class="muted">© <span id="year">2025</span> ONG Esperança da criança. Todos os direitos reservados.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
