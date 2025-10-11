@@ -48,3 +48,5 @@ Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*! Para con
 5.  Abra um `pull request`.
 
 # Licença
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]
+()
