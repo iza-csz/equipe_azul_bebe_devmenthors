@@ -3,7 +3,7 @@
 
 Trabalho do **Azul Bebê** em parceria com o **DevMenthors** para a criação do trabalho de conclusão.
 
-# Índice
+# 📖Índice
 
 - [Descrição]()
 - [Técnologias Utilizadas]()
@@ -13,17 +13,17 @@ Trabalho do **Azul Bebê** em parceria com o **DevMenthors** para a criação do
 - [Licença]()
 - [Autores]()
 
-#Links úteis:
+# 🔗Links úteis:
 -[Figma]()
 -[Documentação]()
 
-#Descrição
+# 📑Descrição
 
 Este projeot visa na criação de um site para a ONG Associação a Esperança da Criança como parte de um prjeto de fim semestre do curso DEVMenthors da Unimar.
 
-#Tecnologias Utilizadas
+# 💻Tecnologias Utilizadas
 
-#Estruturas de Pasta
+# 📁Estruturas de Pasta
 
 # ⚙️Desenvolvimento e Instalação
 Siga os passos abaixo para configurar o ambiente de desenvolvimento e executar o projeto:
@@ -46,3 +46,5 @@ Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*! Para con
 3.  Faça o `commit` das suas alterações: `git commit -m 'feat: Minha nova feature'`.
 4.  Envie para o `branch` original: `git push origin minha-nova-feature`.
 5.  Abra um `pull request`.
+
+# Licença
