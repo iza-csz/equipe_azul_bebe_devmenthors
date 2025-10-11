@@ -35,7 +35,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e executar o
  
 1. **Clone o repositório:**
    ```bash
-   **coloar link do github**
+    git clone https://github.com/iza-csz/equipe_azul_bebe_devmenthors.git
    ```
 2. **Navegue até a pasta do projeto:**
    ```bash
