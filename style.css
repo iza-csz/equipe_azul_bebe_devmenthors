@@ -1,0 +1,86 @@
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --accent:#0066a2;
+  --accent-2:#00a38a;
+  --muted:#6b7280;
+  --maxw:1100px;
+  --radius:12px;
+  --shadow:0 6px 18px rgba(12,20,30,0.08);
+  --gap:1.25rem;
+  --ff:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ff);
+  background:linear-gradient(180deg,var(--bg),#ffffff);
+  color:#0b1320;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  padding-bottom:4rem;
+}
+
+a{color:var(--accent);text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:var(--maxw);margin:0 auto;padding:1.25rem}
+
+/* HEADER */
+header{backdrop-filter:saturate(120%) blur(6px);position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.85);box-shadow:0 1px 0 rgba(15,23,42,0.03)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0}
+.brand{display:flex;gap:0.75rem;align-items:center}
+.brand .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+.brand h1{font-size:1.05rem;margin:0}
+nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0;align-items:center}
+nav li{font-size:0.95rem}
+.cta{background:var(--accent);color:white;padding:0.4rem 0.8rem;border-radius:10px;box-shadow:var(--shadow)}
+.menu-toggle{display:none}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:2.25rem 0}
+.hero-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem}
+.hero h2{margin:0 0 .5rem;font-size:1.8rem}
+.hero p{color:var(--muted);margin:0 0 1rem}
+.stats{display:flex;gap:1rem;flex-wrap:wrap}
+.stat{background:#f2f7fb;padding:.6rem .9rem;border-radius:10px;font-weight:600}
+
+/* SEÇÕES */
+section{padding:2rem 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow)}
+.programs .card h3{margin-top:0}
+
+/* EVENTOS */
+.events-list{display:grid;gap:.75rem}
+.event{display:flex;gap:1rem;align-items:center;padding:.75rem;border-radius:10px;background:#fff}
+.event .date{min-width:72px;text-align:center;padding:.5rem;border-radius:8px;background:#f3fbfa;color:var(--accent-2);font-weight:700}
+
+/* FORMULÁRIOS */
+form{display:grid;gap:.6rem}
+input,textarea,select{padding:.6rem .75rem;border-radius:8px;border:1px solid #e6e9ef;font-size:0.95rem}
+textarea{min-height:120px;resize:vertical}
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:600}
+
+/* FOOTER */
+footer{padding:2rem 0;color:var(--muted);border-top:1px solid #eef3f7;margin-top:2rem}
+.footer-grid{display:flex;gap:2rem;flex-wrap:wrap;align-items:flex-start}
+
+/* RESPONSIVO */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:680px){
+  nav ul{display:none}
+  .menu-toggle{display:block}
+  .grid-3{grid-template-columns:1fr}
+  .brand h1{font-size:0.95rem}
+  .hero{padding:1rem 0}
+}
+
+/* EXTRAS */
+.muted{color:var(--muted)}
+.center{display:flex;align-items:center;justify-content:center}
