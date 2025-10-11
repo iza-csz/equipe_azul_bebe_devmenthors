@@ -39,10 +39,11 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e executar o
    ```
 2. **Navegue até a pasta do projeto:**
    ```bash
-   **colocar nome da página principal**
+    cd equipe_azul_bebe_devmenthors-main
    ```
  
 3. **Abra o arquivo principal:** Abra o arquivo `src/index.html` <!-- Esse src/index.html sera mudado caso a pasta não seja mais essa ok-->em seu navegador para visualizar o projeto.
+   
 # 🤝Contribuição
 <!-- Vai ser em uma aula mais para frente (Basicamente, colocar o meu projeto para poderem copiar e fazer alterações, mas sem alterar o projeto diretamente -->
 Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*! Para contribuir, siga estes passos:
