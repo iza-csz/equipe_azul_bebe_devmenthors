@@ -5,17 +5,17 @@ Trabalho do **Azul Bebê** em parceria com o **DevMenthors** para a criação do
 
 # 📖Índice
 
-- [Descrição]()
-- [Técnologias Utilizadas]()
-- [Estruturas de pastas]()
-- [Desenvolvimento e Instalação]()
-- [Contribuição]()
-- [Licença]()
-- [Autores]()
+- [Descrição](#descrição)
+- [Técnologias Utilizadas](#tecnologias-utilizadas)
+- [Estruturas de pastas](#estruturas-de-pasta)
+- [Desenvolvimento e Instalação](#%EF%B8%8Fdesenvolvimento-e-instalação)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+- [Autores](#%EF%B8%8Fautores)
 
 # 🔗Links úteis:
 -[Figma]()
--[Documentação]()
+-[Documentação](https://www.notion.so/2511e752f91880cbb9edd34a3fe097b5?v=2531e752f91880e5ab99000c98508493)
 
 # 📑Descrição
 
@@ -23,6 +23,11 @@ Este projeot visa na criação de um site para a ONG Associação a Esperança d
 
 # 💻Tecnologias Utilizadas
 
+- html
+- css
+- php
+- github
+  
 # 📁Estruturas de Pasta
 
 # ⚙️Desenvolvimento e Instalação
@@ -47,6 +52,11 @@ Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*! Para con
 4.  Envie para o `branch` original: `git push origin minha-nova-feature`.
 5.  Abra um `pull request`.
 
-# Licença
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]
-()
+# 🔏Licença
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/iza-csz/equipe_azul_bebe_devmenthors/blob/main/LICENSE)
+
+# ✒️Autores
+- Izadora Cibantos de Souza - Programadora
+- Manuella Queiroz de Oliveira - Documentação
+- Alisson Nogueira Claro - Design
+- Miguel Angelo Antonio - Programador
